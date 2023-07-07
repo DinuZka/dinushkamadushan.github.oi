@@ -195,3 +195,75 @@ span{
     color: #c9c3c3;
     font-weight: 100;
 }
+
+header .hamburger{
+    display: none;
+}
+
+@media (max-width:600px){
+    header .content {
+        padding-top: 1rem;
+    }
+
+    .logo h1{
+        font-size: 1.5rem;
+    }
+
+    .left .title h1, .comma{
+        font-size: 16vw;
+    }
+
+    nav{
+        position: fixed;
+        background-color: white;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 5rem;
+        z-index: 100;
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: 0.5s ease-out;
+    }
+
+    header .hamburger{
+        display: block;
+        content: "";
+        visibility: show;
+        position: absolute;
+        top: 1.5rem;
+        z-index: 1000;
+        right: 2.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        border: 0.3rem solid white;
+        background-image: url('images/hamburger.svg');
+        background-size: cover;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li{
+        width: 100%;
+        padding: 3rem;
+    }
+
+    nav ul li a{
+        color: black;
+    }
+
+    nav .btn{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .show-menu nav{
+        visibility: visible;
+        transform: translateX(0%);
+    }
+}
